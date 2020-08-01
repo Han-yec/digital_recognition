@@ -1,0 +1,4 @@
+NumberHits:7
+Timestamp: Wed Oct 30 06:46:58 UTC 2019
+VLNV: xilinx.com:user:Clk_Division:1.0
+SynthRuntime: 28

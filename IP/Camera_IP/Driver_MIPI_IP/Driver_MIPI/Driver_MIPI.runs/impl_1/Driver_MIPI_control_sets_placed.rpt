@@ -1,0 +1,91 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sun Oct 20 18:52:16 2019
+| Host         : DESKTOP-DU9F0PS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Driver_MIPI_control_sets_placed.rpt
+| Design       : Driver_MIPI
+| Device       : xc7s15
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    25 |
+| Unused register locations in slices containing registers |    66 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|     10 |            4 |
+|    16+ |           20 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             498 |           82 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              62 |           10 |
+| Yes          | No                    | No                     |             288 |           47 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             222 |           31 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|             Clock Signal             |                        Enable Signal                       |                       Set/Reset Signal                      | Slice Load Count | Bel Load Count |
++--------------------------------------+------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+|  Data_Read/U0/clock_system_inst/pclk |                                                            |                                                             |                1 |              2 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/curr_delay                  |                                                             |                2 |             10 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/end_dly_0                   |                                                             |                1 |             10 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/start_dly_1                 |                                                             |                2 |             10 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/sum_dly                     |                                                             |                2 |             10 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/lane_align_inst/data_shift[1]_0             |                                                             |                4 |             16 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/lane_align_inst/to_cnt[0]_2                 | Data_To_Csi/U0/lane_align_inst/p_5_out[0]                   |                3 |             16 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/lane_align_inst/to_cnt[1]_1                 | Data_To_Csi/U0/lane_align_inst/p_5_out[1]                   |                2 |             16 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/parser_inst/packet_size[15]_i_1_n_0         |                                                             |                2 |             16 |
+|  Data_Read/U0/clock_system_inst/CLK  | Driver_Csi_To_Dvp0/vdata                                   | Driver_Csi_To_Dvp0/frame_start_pos                          |                3 |             20 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/parser_inst/m_axis_tvalid                   | Driver_Csi_To_Dvp0/valid_neg                                |                2 |             20 |
+|  Data_Read/U0/clock_system_inst/CLK  |                                                            | Driver_Csi_To_Dvp0/frame_start_pos                          |                4 |             22 |
+|  Data_Read/U0/clock_system_inst/CLK  | Driver_Csi_To_Dvp0/addra_reg[10][0]                        | Driver_Bayer_To_RGB0/addra[10]_i_1_n_0                      |                3 |             22 |
+|  clk_200MHz_IBUF_BUFG                |                                                            |                                                             |                8 |             26 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/wait_cnt                    | Data_Read/U0/clock_system_inst/dly_gen.wait_cnt[12]_i_1_n_0 |                5 |             26 |
+|  Data_Read/U0/clock_system_inst/CLK  | Driver_Csi_To_Dvp0/sel                                     | Driver_Csi_To_Dvp0/unpack_cnt                               |                4 |             30 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/parser_inst/packet_size[7]_i_1_n_0          |                                                             |                4 |             32 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_To_Csi/U0/parser_inst/transfer_cnt[15]_i_2_n_0        | Data_To_Csi/U0/parser_inst/transfer_cnt[15]_i_1_n_0         |                4 |             32 |
+| ~Data_Read/U0/clock_system_inst/CLK  |                                                            |                                                             |                5 |             34 |
+|  clk_200MHz_IBUF_BUFG                |                                                            | Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0  |                6 |             40 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0 |                                                             |                6 |             40 |
+|  clk_200MHz_IBUF_BUFG                | Data_Read/U0/clock_system_inst/dly_gen.acc_val[0]_i_1_n_0  | Data_Read/U0/clock_system_inst/dly_gen.acc_cnt[19]_i_1_n_0  |                5 |             40 |
+|  Data_Read/U0/clock_system_inst/CLK  | Driver_Bayer_To_RGB0/color_g[9]_i_1_n_0                    |                                                             |                8 |             48 |
+|  Data_Read/U0/clock_system_inst/CLK  | Data_Read/U0/dl0_rxvalidhs                                 |                                                             |               16 |             96 |
+|  Data_Read/U0/clock_system_inst/CLK  |                                                            |                                                             |               71 |            460 |
++--------------------------------------+------------------------------------------------------------+-------------------------------------------------------------+------------------+----------------+
+
+
